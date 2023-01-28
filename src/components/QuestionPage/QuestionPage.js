@@ -70,11 +70,11 @@ const QuestionPage = () => {
 
   const submitAnswer = (status) => {
     if (status) {
-      setScore(score + 1);
+      setScore(prevState => prevState + 1);
     }
 
     if (questionNum < questions.length) {
-      setQuestionNum(questionNum + 1);
+      setQuestionNum(prevState => prevState + 1);
     } else {
       setFinished(true);
     }
@@ -93,7 +93,7 @@ const QuestionPage = () => {
             <button
               key={answer.id}
               className="btn"
-              onClick={submitAnswer(answer.status)}
+              onClick={submitAnswer.bind(null, answer.status)}
             >
               {answer.answer}
             </button>
