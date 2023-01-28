@@ -6,8 +6,8 @@ import "./App.css";
 const App = () => {
   return (
     <div>
-      <QuestionPage></QuestionPage>
-      <Footer></Footer>
+      <QuestionPage />
+      <Footer />
     </div>
   );
 };
