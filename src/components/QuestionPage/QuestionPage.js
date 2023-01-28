@@ -70,11 +70,11 @@ const QuestionPage = () => {
 
   const submitAnswer = (status) => {
     if (status) {
-      setScore(prevState => prevState + 1);
+      setScore((prevState) => prevState + 1);
     }
 
     if (questionNum < questions.length) {
-      setQuestionNum(prevState => prevState + 1);
+      setQuestionNum((prevState) => prevState + 1);
     } else {
       setFinished(true);
     }
